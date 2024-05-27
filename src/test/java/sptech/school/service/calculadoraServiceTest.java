@@ -8,7 +8,8 @@ import service.CalculadoraService;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class calculadoraServiceTest {
+class calculadoraserviceteste {
+
     @Test
     @DisplayName("Quando acionado com 10 e 2, então deve retornar 5")
     public void testDividir() {
@@ -24,7 +25,6 @@ public class calculadoraServiceTest {
         // Assert
         assertEquals(esperado, resultado);
     }
-
 
     @Test
     @DisplayName("Dividindo por zero e obtendo lançar uma exceção")
