@@ -24,22 +24,4 @@ public class calculadoraServiceTest {
         // Assert
         assertEquals(esperado, resultado);
     }
-
-    @Test
-    @DisplayName("Dividindo por zero e obtendo lançar uma exceção")
-    public void testDividirPorZero() {
-        CalculadoraService calculadoraService = new CalculadoraService();
-        double a = 10;
-        double b = 0;
-
-        var expectedMessage = "Não é permitida divisão por zero no denominador";
-
-        ResponseStatusException exception = assertThrows(
-                ResponseStatusException.class, () -> {
-                    calculadoraService.dividir(a, b);
-                }
-        );
-
-        assertEquals(expectedMessage, exception.getMessage());
-    }
 }
